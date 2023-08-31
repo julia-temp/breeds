@@ -1,0 +1,10 @@
+<section>
+  <app-breeds-search
+    [breedsList]="(breeds$ | async)!"
+    (valueChanged)="getBreedImages($event)"
+  ></app-breeds-search>
+</section>
+
+<section>
+  <app-breeds-list [breedsImages]="(breedsImages$ | async)!"></app-breeds-list>
+</section>

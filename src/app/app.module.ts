@@ -3,16 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MissingImageDirective } from './directives/missing-image.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MissingImageDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

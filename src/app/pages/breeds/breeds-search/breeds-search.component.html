@@ -1,0 +1,15 @@
+<form [formGroup]="breedsForm" class="search-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Select breed:</mat-label>
+    <mat-select formControlName="breed">
+      <mat-option *ngFor="let breed of breedsList" [value]="breed">
+        {{ breed }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter number from 1 to 50:</mat-label>
+    <input matInput type="number" formControlName="quantity" min="1" max="50" />
+  </mat-form-field>
+</form>
